@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Fresh Tomatoes!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+            background-color:#708090;
+            
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            margin-bottom: 20px;
+            padding-top: 20px;
+            background-color:rgb(130,260,390);
+            font-family:algerian;
+            font-size:15
+        }
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+            background-color:rgb(30,200,500);
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+            background-color:rgb(50,100,150);
+            border-style:double;
+            
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgb(10,10,10);
+        }
+        img{
+            border-radius:50%
+            }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="zdjqWHj65Uk" data-toggle="modal" data-target="#trailer">
+    <img src="https://www.chitramala.in/wp-content/uploads/2015/05/Kerintha-Poster-300x300.jpg" width="220" height="342">
+    <h2>Kerintha</h2>
+    <p style="font-family:bell mt;font-size:10">A story about college students</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="Zh7Bfviqn30" data-toggle="modal" data-target="#trailer">
+    <img src="http://www.totalmovieinfo.com/wp-content/uploads/2018/05/1-16.jpg" width="220" height="342">
+    <h2>life is beautiful</h2>
+    <p style="font-family:bell mt;font-size:10">a story about students</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="BYy7gkao5cw" data-toggle="modal" data-target="#trailer">
+    <img src="https://c.saavncdn.com/361/Happy-Days-2007-500x500.jpg" width="220" height="342">
+    <h2>Happy days</h2>
+    <p style="font-family:bell mt;font-size:10">a story about college students</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="fg5QALirV-I" data-toggle="modal" data-target="#trailer">
+    <img src="http://www.myindiclub.com/music/2/KALASALA/KALASALA.JPG" width="220" height="342">
+    <h2>kalasala</h2>
+    <p style="font-family:bell mt;font-size:10">a story about college students</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="eYZ_bP9xGpQ" data-toggle="modal" data-target="#trailer">
+    <img src="https://i.pinimg.com/236x/a8/12/8f/a8128f07b20bc9c6852177b68def7feb.jpg" width="220" height="342">
+    <h2>snehitudu</h2>
+    <p style="font-family:bell mt;font-size:10">A story about college students</p>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="RWNrgxgqbdc" data-toggle="modal" data-target="#trailer">
+    <img src="https://i.ytimg.com/vi/0eMQl_quDV8/maxresdefault.jpg" width="220" height="342">
+    <h2>robo2</h2>
+    <p style="font-family:bell mt;font-size:10">a movie about cellphones</p>
+</div>
+
+    </div>
+  </body>
+</html>
