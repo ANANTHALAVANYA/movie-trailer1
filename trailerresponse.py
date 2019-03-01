@@ -1,6 +1,5 @@
 import trailer
 import fresh_tomatoes
-
 kerintha=trailer.Favouritemovies("Kerintha","A story about colle"
                                  "ge students","https://www.chitramal"
                                  "a.in/wp-content/uploads/2015/05/Kerint"
@@ -16,6 +15,7 @@ kalasala=trailer.Favouritemovies("kalasala","a story about college students","ht
 snehitudu=trailer.Favouritemovies("snehitudu","A story about college students","http"
                                   "s://i.pinimg.com/236"
                                   "x/a8/12/8f/a8128f07b20bc9c6852177b68def7feb.jpg","https://"
+                                  
                                   "youtu.be/eYZ_bP9xGpQ")
 robo=trailer.Favouritemovies("robo2","a movie about cellphones","https://i.ytimg.com/vi/0eMQl_quDV8/maxresdefault.jpg","https://youtu.be/RWNrgxgqbdc")
 movies=[kerintha,lifeisbeautiful,happydays,kalasala,snehitudu,robo]
