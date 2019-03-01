@@ -17,7 +17,8 @@ main_page_head = '''
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
-        body {
+        body 
+        {
             padding-top: 80px;
             background-color:#708090;
             
@@ -43,7 +44,7 @@ main_page_head = '''
             background-color:rgb(130,260,390);
             font-family:algerian;
             font-size:15
-        }
+       }
         .movie-tile:hover {
             background-color: #EEE;
             cursor: pointer;
@@ -56,7 +57,8 @@ main_page_head = '''
             border-style:double;
             
         }
-        .scale-media iframe {
+        .scale-media iframe
+        {
             border: none;
             height: 100%;
             position: absolute;
